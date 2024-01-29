@@ -9,6 +9,10 @@ On the top of it, the following features have been added with relatively small c
 * Hot-reload support for Electron app
 * Electron Builder support
 
+## About project
+
+Your all-in-one investment companion designed to simplify and elevate your financial journey. Whether you're a seasoned investor or just starting, our app empowers you with the tools and insights needed to make informed investment decisions.
+
 ## Available Scripts in addition to the existing ones
 
 ### `npm run electron:dev`
