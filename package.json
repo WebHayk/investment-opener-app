@@ -1,0 +1,91 @@
+{
+  "name": "btmain-opener",
+  "version": "1.0.0",
+  "author": "Anonymous",
+  "description": "Application for automation mining start button",
+  "homepage": ".",
+  "main": "build/electron/main.js",
+  "private": true,
+  "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.5",
+    "@mui/joy": "^5.0.0-beta.23",
+    "@mui/material": "^5.15.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jest": "^29.4.0",
+    "@types/node": "^18.13.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "electron-chromedriver": "^26.6.7",
+    "electron-devtools-installer": "^3.2.0",
+    "electron-reload": "^1.5.0",
+    "firebase": "^10.7.2",
+    "puppeteer": "^21.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.21.3",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^3.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "postinstall": "electron-builder install-app-deps",
+    "electron:dev": "concurrently \"cross-env BROWSER=none yarn start\" \"wait-on http://127.0.0.1:3000 && tsc -p electron -w\" \"wait-on http://127.0.0.1:3000 && tsc -p electron && electron .\"",
+    "electron:build": "yarn build && tsc -p electron && electron-builder",
+    "eject": "react-scripts eject"
+  },
+  "build": {
+    "extends": null,
+    "files": [
+      "build/**/*"
+    ],
+    "icon": "build/bitcoin.png",
+    "extraFiles": [
+      "public/chromedriver.exe"
+    ],
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/favicon.ico",
+      "uninstallerIcon": "build/favicon.ico",
+      "installerHeaderIcon": "build/favicon.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BTMain Opener"
+    }
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@types/electron-devtools-installer": "^2.2.5",
+    "concurrently": "^7.6.0",
+    "cross-env": "^7.0.3",
+    "electron": "^28.1.4",
+    "electron-builder": "^23.6.0",
+    "typescript": "^5.3.3",
+    "wait-on": "^7.0.1"
+  }
+}
