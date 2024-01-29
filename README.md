@@ -11,7 +11,7 @@ On the top of it, the following features have been added with relatively small c
 
 ## About project
 
-Your all-in-one investment companion designed to simplify and elevate your financial journey. Whether you're a seasoned investor or just starting, our app empowers you with the tools and insights needed to make informed investment decisions.
+This desktop app with core concept Electron+React+Typescript, help users to manage self finances in the specific system.
 
 ## Available Scripts in addition to the existing ones
 
@@ -27,6 +27,13 @@ You will also see any lint errors in the console.
 Builds the Electron app package for production to the `dist` folder.
 
 Your Electron app is ready to be distributed!
+
+## **Production main dependencies**
+
+🔵 **Material UI (Joy UI)** - open-source React component library. <br />
+🔵 **Electron JS** - tool for build cross-platform desktop apps with JavaScript, HTML, and CSS <br />
+🔵 **Firebase** - cloud-based development tool. <br />
+🔵 **Puppeteer** - Node.js library which provides a high-level API to control Chrome/Chromium over the DevTools Protocol.<br />
 
 ## Project directory structure
 
